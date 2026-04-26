@@ -1,4 +1,4 @@
-# ExampleMod
+# ReBlendshapes
 
 A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) that automatically creates ValueCopies between your avatar's blendshapes and it's clothing/other accessory.
 <!-- Edit to describe what your mod does and what it may solve -->
