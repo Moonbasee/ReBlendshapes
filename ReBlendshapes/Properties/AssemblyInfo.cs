@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("ExampleMod")]
-[assembly: AssemblyProduct("ExampleMod")]
-[assembly: AssemblyDescription("Description of your mod")]
-[assembly: AssemblyCompany("ExampleAuthor")]
-[assembly: AssemblyCopyright("Copyright © 2026 ExampleAuthor")]
-[assembly: AssemblyVersion(ExampleMod.ExampleMod.VERSION_CONSTANT)]
-[assembly: AssemblyFileVersion(ExampleMod.ExampleMod.VERSION_CONSTANT)]
+[assembly: AssemblyTitle("ReBlendshapes")]
+[assembly: AssemblyProduct("ReBlendshapes")]
+[assembly: AssemblyDescription("An RML Mod That Automatically Creates ValueCopies Based On Mesh Blendshapes")]
+[assembly: AssemblyCompany("Moonbase__")]
+[assembly: AssemblyCopyright("Copyright © 2026 Moonbase__")]
+[assembly: AssemblyVersion(ReBlendshapes.ReBlendshapes.VERSION_CONSTANT)]
+[assembly: AssemblyFileVersion(ReBlendshapes.ReBlendshapes.VERSION_CONSTANT)]

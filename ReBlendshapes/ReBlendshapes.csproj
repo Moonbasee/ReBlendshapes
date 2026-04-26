@@ -23,6 +23,12 @@
 			<HintPath>$(ResonitePath)FrooxEngine.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="Elements.Core">
+			<HintPath>$(ResonitePath)Elements.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Elements.Assets">
+			<HintPath>$(ResonitePath)Elements.Assets.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 	<ItemGroup>
