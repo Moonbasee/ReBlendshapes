@@ -91,7 +91,7 @@ public class ReBlendshapes : ResoniteMod {
 			// does the instance and target both contains weights?
 			if(instanceWeightElementsList.Count <= 0 || targetWeightElementsList.Count <= 0)
 			{
-				UniLog.Log("The Instance Mesh Or Target Mesh Do Not Have Blendshapes.");
+				Warn("The Instance Mesh Or Target Mesh Do Not Have Blendshapes.");
 				button.LabelText = "Cannot Setup Value Copies. Do Both Meshes Have Matching Shapes?";
 			}
 
@@ -107,12 +107,12 @@ public class ReBlendshapes : ResoniteMod {
 				List<Sync<float>> instanceWeightFields, List<Sync<float>> targetWeightFields
 		)
 		{
-			UniLog.Log("Creating Slot To Contain Value Copies...");
+			Debug("Creating Slot To Contain Value Copies...");
 
 			var instanceParent = instance.Slot.Parent;
 			var copyRoot = instanceParent.AddSlot($"{target.Slot.Name} VC's");
 
-			UniLog.Log("Creating Value Copies...");
+			Debug("Creating Value Copies...");
 
 			// compare lists
 			int matches = 0;
@@ -120,7 +120,7 @@ public class ReBlendshapes : ResoniteMod {
 			{
 				if(element != null) 
 				{
-					UniLog.Log($"Processing Blendshape '{element.NameWithPath}'...");
+					Debug($"Processing Blendshape '{element.NameWithPath}'...");
 
 					// sometimes, avatar/accessory creators make the names of the blendshapes on accessories slightly different from eachother, we should
 					// accomadate for that here
@@ -128,7 +128,7 @@ public class ReBlendshapes : ResoniteMod {
 
 					if(targetElement != null)
 					{
-						UniLog.Log($"Source BlendShape '{element.NameWithPath}' Matches Up With Target BlendShape '{targetElement.NameWithPath}'");
+						Debug($"Source BlendShape '{element.NameWithPath}' Matches Up With Target BlendShape '{targetElement.NameWithPath}'");
 						// we have a match! create value copy component for that shape (there is probably a better way to do this)
 						var valueCopy = copyRoot.AttachComponent<ValueCopy<float>>();
 
