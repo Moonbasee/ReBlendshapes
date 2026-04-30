@@ -3,13 +3,7 @@ using HarmonyLib;
 using FrooxEngine;
 using FrooxEngine.UIX;
 using SkinnedMeshRenderer = FrooxEngine.SkinnedMeshRenderer;
-using System.Reflection;
-using Elements.Assets;
 using Elements.Core;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
-using System.Runtime.CompilerServices;
-using Microsoft.VisualBasic;
 
 namespace ReBlendshapes;
 //More info on creating mods can be found https://github.com/resonite-modding-group/ResoniteModLoader/wiki/Creating-Mods
@@ -64,9 +58,9 @@ public class ReBlendshapes : ResoniteMod {
                                 ui);
 
                             var btn = ui.Button("Create Value Copies");
-                            btn.LocalPressed += (button, data) =>
+                            btn.LocalPressed += (button, _) =>
                             {
-                                __instance.Slot.StartCoroutine(Process(button, data, __instance, slotField.Reference.Target));
+                                __instance.Slot.StartCoroutine(Process(button, __instance, slotField.Reference.Target));
                             };
                         }
                         ui.NestOut();
@@ -78,7 +72,7 @@ public class ReBlendshapes : ResoniteMod {
             ui.NestOut();
         }
 
-		private static IEnumerator<Context> Process(IButton button, ButtonEventData data, SkinnedMeshRenderer instance, SkinnedMeshRenderer target) 
+		private static IEnumerator<Context> Process(IButton button, SkinnedMeshRenderer instance, SkinnedMeshRenderer target) 
 		{
 			// get a list of blendshapeweight elements for the instance and target
 			var instanceWeightElements = instance.BlendShapeWeights.Elements;
