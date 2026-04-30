@@ -8,7 +8,7 @@ using Elements.Core;
 namespace ReBlendshapes;
 //More info on creating mods can be found https://github.com/resonite-modding-group/ResoniteModLoader/wiki/Creating-Mods
 public class ReBlendshapes : ResoniteMod {
-	internal const string VERSION_CONSTANT = "1.0.0"; //Changing the version here updates it in all locations needed
+	internal const string VERSION_CONSTANT = "1.0.1"; //Changing the version here updates it in all locations needed
 	public override string Name => "ReBlendshapes";
 	public override string Author => "Moonbase__";
 	public override string Version => VERSION_CONSTANT;
